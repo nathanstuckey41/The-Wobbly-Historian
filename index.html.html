@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wobbly Historian: history, explained by a stick figure</title>
+<meta name="description" content="Funny stick-figure videos about history’s strangest moments. Watch, subscribe, and get the weekly newsletter.">
+<style>
+:root{
+  --bg:#f4f2ea; --panel:#ffffff; --ink:#1d2b27; --muted:#55645f;
+  --accent:#1a6fd1; --mark:#f0b800; --line:#cfd6d1; --btn-text:#ffffff;
+  --display:"Chalkboard SE","Marker Felt","Bradley Hand","Segoe Print","Comic Neue",cursive;
+  --body:"Trebuchet MS","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1b2f2a; --panel:#243b35; --ink:#f3f1e7; --muted:#b9c6c0;
+    --accent:#7dbbff; --mark:#f6cb3c; --line:#3b544d; --btn-text:#10201b;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--mark);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.site{padding:16px 0;border-bottom:2px dashed var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-size:1.35rem;font-weight:700;text-decoration:none;color:var(--ink)}
+nav a{margin-left:18px;color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--mark);text-decoration-thickness:3px;text-underline-offset:5px}
+.hero{padding:56px 0 48px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+h1{font-family:var(--display);font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.08;margin:0 0 18px}
+.lede{font-size:1.2rem;color:var(--muted);max-width:34em;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--btn-text)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{transform:translateY(-2px)}
+.stage{position:relative}
+.bubble{position:absolute;top:0;left:-6px;max-width:210px;background:var(--panel);border:2.5px solid var(--ink);border-radius:18px;padding:10px 14px;font-family:var(--display);font-size:1.05rem;line-height:1.3;animation:pop .5s .3s both}
+.bubble::after{content:"";position:absolute;bottom:-14px;left:44px;width:20px;height:20px;background:var(--panel);border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+.stage svg{width:100%;height:auto;display:block}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+section{padding:46px 0}
+h2{font-family:var(--display);font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--ink);display:block}
+.card:hover{border-color:var(--accent)}
+.thumb{aspect-ratio:16/9;display:block;width:100%}
+.card .meta{padding:14px 16px 16px}
+.card h3{margin:0 0 4px;font-size:1.08rem;line-height:1.3}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.about p{margin:0 0 14px;max-width:38em}
+.facts{background:var(--panel);border:2px dashed var(--line);border-radius:14px;padding:22px}
+.facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
+.facts dt{font-family:var(--display);font-weight:700}
+.facts dd{margin:0;color:var(--muted)}
+.signup{background:var(--panel);border:2px solid var(--line);border-radius:18px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+form{display:flex;gap:10px;flex-wrap:wrap}
+label.vh{position:absolute;left:-9999px}
+input[type=email]{flex:1 1 220px;padding:13px 16px;border-radius:999px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+input[type=email]:focus{border-color:var(--accent);outline:none}
+button.btn{cursor:pointer;font:inherit;font-weight:700}
+#thanks{margin:12px 0 0;font-weight:700;min-height:1.6em}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.socials a{padding:11px 20px;border-radius:12px;border:2px solid var(--line);background:var(--panel);color:var(--ink);text-decoration:none;font-weight:700}
+.socials a:hover{border-color:var(--mark)}
+details{background:var(--panel);border:2px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{border-top:2px dashed var(--line);padding:26px 0 40px;color:var(--muted);font-size:.92rem}
+@media (max-width:760px){
+  .hero .wrap,.about,.signup{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .bubble{position:static;max-width:none;margin-bottom:22px;display:inline-block}
+  .bubble::after{display:none}
+  nav a{margin:0 14px 0 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="stick" viewBox="0 0 100 160">
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="50" cy="26" r="18"/>
+      <path d="M50 44v60M50 62l-30 24M50 62l32-20M50 104l-24 44M50 104l26 44"/>
+    </g>
+    <circle cx="43" cy="22" r="2.6" fill="currentColor"/><circle cx="57" cy="22" r="2.6" fill="currentColor"/>
+    <path d="M42 33q8 7 16 0" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top">The Wobbly Historian</a>
+    <nav aria-label="Main">
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>History, explained by a stick figure who wasn’t there.</h1>
+        <p class="lede">Short, funny videos about the strangest moments in the past, with simple drawings and the occasional bad guess.</p>
+        <div class="btns">
+          <a class="btn primary" href="#videos">Watch the latest</a>
+          <a class="btn ghost" href="#newsletter">Get the weekly email</a>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="bubble">Fun fact: nobody had a plan.</div>
+        <svg viewBox="0 0 320 300" role="img" aria-label="A stick figure pointing at a chalkboard timeline">
+          <rect x="10" y="20" width="300" height="190" rx="14" fill="none" stroke="currentColor" stroke-width="5"/>
+          <path d="M34 150h252" stroke="var(--mark)" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <g fill="var(--accent)"><circle cx="70" cy="150" r="9"/><circle cx="160" cy="150" r="9"/><circle cx="250" cy="150" r="9"/></g>
+          <path d="M52 100q18-26 36 0M142 96q18-26 36 0M232 100q18-26 36 0" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <use href="#stick" x="120" y="150" width="70" height="112" style="color:var(--ink)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <section id="videos">
+    <div class="wrap">
+      <h2>Latest videos</h2>
+      <p class="sub">New episodes most Fridays. Sample titles for this demo.</p>
+      <div class="grid">
+        <a class="card" href="#" aria-label="Watch: The Great Tomato Panic">
+          <svg class="thumb" viewBox="0 0 320 180" role="img" aria-label="Stick figure holding a tomato">
+            <rect width="320" height="180" fill="#2c5d4f"/>
+            <circle cx="225" cy="95" r="34" fill="#e5533d"/><path d="M212 66q13-14 26 0" stroke="#7bcf6a" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <use href="#stick" x="70" y="22" width="85" height="136" style="color:#f3f1e7"/>
+          </svg>
+          <div class="meta"><h3>The Great Tomato Panic</h3><p>Why people once thought they were poison.</p></div>
+        </a>
+        <a class="card" href="#" aria-label="Watch: The Time a Pig Went to Court">
+          <svg class="thumb" viewBox="0 0 320 180" role="img" aria-label="Stick figure judge next to a pig">
+            <rect width="320" height="180" fill="#3a4f7a"/>
+            <ellipse cx="228" cy="112" rx="42" ry="30" fill="#f2a7b8"/><circle cx="262" cy="104" r="17" fill="#f2a7b8"/><circle cx="270" cy="104" r="3" fill="#3a2230"/>
+            <path d="M60 150h70" stroke="#f0b800" stroke-width="8" stroke-linecap="round"/>
+            <use href="#stick" x="62" y="22" width="85" height="136" style="color:#f3f1e7"/>
+          </svg>
+          <div class="meta"><h3>The Time a Pig Went to Court</h3><p>A real trial, a very serious wig.</p></div>
+        </a>
+        <a class="card" href="#" aria-label="Watch: How to Lose a Whole Kingdom">
+          <svg class="thumb" viewBox="0 0 320 180" role="img" aria-label="Stick figure wearing a crown">
+            <rect width="320" height="180" fill="#6a3f63"/>
+            <path d="M205 120l12-40 20 24 20-24 12 40z" fill="#f0b800"/>
+            <rect x="205" y="120" width="64" height="12" fill="#d49b00"/>
+            <use href="#stick" x="70" y="22" width="85" height="136" style="color:#f3f1e7"/>
+          </svg>
+          <div class="meta"><h3>How to Lose a Whole Kingdom</h3><p>A short guide, written by the losers.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About the channel</h2>
+        <p>The Wobbly Historian turns long, confusing stories into short ones you can retell at dinner. Every episode uses one stick figure, a handful of drawings, and as few dates as possible.</p>
+        <p>This is a fictional channel made as a demo of a creator website.</p>
+      </div>
+      <div class="facts">
+        <dl>
+          <dt>Format</dt><dd>Stick-figure comedy</dd>
+          <dt>Length</dt><dd>6 to 10 minutes</dd>
+          <dt>Schedule</dt><dd>New video every Friday</dd>
+          <dt>Best for</dt><dd>Curious people with short attention spans</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <div class="wrap">
+      <div class="signup">
+        <div>
+          <h2>Get one weird story a week</h2>
+          <p class="sub" style="margin:0">Each email has a short story that didn’t fit in a video. No spam, and you can leave any time.</p>
+        </div>
+        <div>
+          <form id="signup-form" novalidate>
+            <label class="vh" for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button class="btn primary" type="submit">Join the list</button>
+          </form>
+          <p id="thanks" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="follow">
+    <div class="wrap">
+      <h2>Find me elsewhere</h2>
+      <p class="sub">Links are placeholders in this demo.</p>
+      <div class="socials">
+        <a href="#">YouTube</a><a href="#">TikTok</a><a href="#">Instagram</a><a href="#">Spotify</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details><summary>How often do new videos come out?</summary><p>Most Fridays. If a week is skipped, it gets announced on the channel.</p></details>
+      <details><summary>Are the stories real?</summary><p>Yes. The facts are checked, and the jokes are not.</p></details>
+      <details><summary>Can I suggest a topic?</summary><p>Yes. Reply to any newsletter email with your idea.</p></details>
+      <details><summary>Do you take sponsorships?</summary><p>Yes. Use the business email in the footer.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Business enquiries: hello@example.com</p>
+    <p>Demo website with a fictional channel. Built to show what a simple creator site can look like.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('signup-form'),
+      email=document.getElementById('email'),
+      msg=document.getElementById('thanks');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=email.value.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){
+      msg.textContent='Please enter a valid email address.';
+      email.focus();
+      return;
+    }
+    msg.textContent='You’re on the list. (Demo only: nothing was sent.)';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
